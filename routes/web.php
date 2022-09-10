@@ -25,5 +25,8 @@ Auth::routes();
 Route::group(['middleware'=>'auth'],function (){
     Route::get('/master',[MasterController::class,'MasterOfFront']);
     Route::get('/my_logout',[MasterController::class,'logout']);
+
+    /*科目登録*/
     Route::get('/course/register',[CourseSubjectController::class,'CourseSubjectIndex']);
+    Route::post('/course/register',[CourseSubjectController::class,'CourseSubjectRegister']);
 });
