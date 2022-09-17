@@ -48,7 +48,7 @@
                     <div id="submenu-5" class="collapse submenu" style="">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="pages/general-table.html">授業科目一覧</a>
+                                <a class="nav-link" href="{{url('/course/list')}}">授業科目一覧</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{url('/course/register')}}">授業科目登録</a>
