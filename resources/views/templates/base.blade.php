@@ -29,6 +29,26 @@
     <div class="dashboard-wrapper">
         <div class="dashboard-ecommerce">
             <div class="container-fluid dashboard-content ">
+                @if(session('danger'))
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="alert alert-danger" role="alert">
+                                <h4 class="alert-heading">失敗...</h4>
+                                <p>処理に失敗しました</p>
+                            </div>
+                        </div>
+                    </div>
+                @elseif(session('success'))
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="alert alert-success" role="alert">
+                                <h4 class="alert-heading">成功!</h4>
+                                <p>正常に処理されました！</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
                 @yield('main')
             </div>
         </div>

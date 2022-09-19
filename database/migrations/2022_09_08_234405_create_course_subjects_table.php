@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('subject',255)->nullable(false);
             $table->string('manager',255)->nullable(false);
             $table->boolean('semester')->nullable(false);
+            $table->string('subject_file',255)->nullable();
             $table->timestamps();
         });
     }

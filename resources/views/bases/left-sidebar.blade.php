@@ -11,7 +11,7 @@
                     メニュー
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link active" href="{{url('/master')}}"><i class="bi bi-house-door-fill"></i>ホーム <span
+                    <a class="nav-link" href="{{url('/master')}}"><i class="bi bi-house-door-fill"></i>ホーム <span
                             class="badge badge-success">6</span></a>
                 </li>
                 <li class="nav-item">

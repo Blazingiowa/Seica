@@ -6978,3 +6978,8 @@ Media Query
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width:320px) {}
+
+.subject-icon{
+    border: 2px solid #1f3134;
+    border-radius: 1px;
+}

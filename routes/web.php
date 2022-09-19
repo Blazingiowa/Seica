@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Seica\CourseSubjectController;
 use App\Http\Controllers\Seica\MasterController;
+use App\Http\Controllers\Seica\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,7 +30,14 @@ Route::group(['middleware'=>'auth'],function (){
     /*科目一覧*/
     Route::get('/course/list',[CourseSubjectController::class,'CourseSubjectList']);
 
-    /*科目登録*/
+    /*科目*/
     Route::get('/course/register',[CourseSubjectController::class,'CourseSubjectRegister']);
     Route::post('/course/register',[CourseSubjectController::class,'CourseSubjectRegister']);
+    Route::get('/course/delete/{id}',[CourseSubjectController::class,'CourseSubjectDelete']);
+    Route::get('/course/edit/{id}',[CourseSubjectController::class,'CourseSubjectEdit']);
+    Route::post('/course/edit/{id}',[CourseSubjectController::class,'CourseSubjectEdit']);
+
+
+    /*アカウント情報*/
+    Route::get('/profile',[ProfileController::class,'AccountMaster']);
 });

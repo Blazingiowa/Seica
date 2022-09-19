@@ -7,7 +7,7 @@
     </style>
 @endsection
 @section('title')
-    科目登録
+    科目編集
 @endsection
 @section('main')
     <div class="row">
@@ -15,10 +15,10 @@
             <div class="page-section" id="overview">
                 <div class="row">
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h2>科目登録</h2>
-                        <p class="lead">授業の科目登録を行います</p>
+                        <h2>科目編集</h2>
+                        <p class="lead">対象授業の科目編集を行います</p>
                         <ul class="list-unstyled arrow">
-                            <li>今年度の授業科目を入力してください</li>
+                            <li>今年度の授業科目を編集してください</li>
                         </ul>
                     </div>
                 </div>
@@ -28,15 +28,15 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="section-block" id="basicform">
-                        <h3 class="section-title">新規科目登録</h3>
+                        <h3 class="section-title">新規科目編集</h3>
                     </div>
                     <div class="card" style="background-color: #887f7a;">
                         <div class="card-body">
-                            {{ Form::open(['url'=>'/course/register','files'=>true])}}
+                            {{ Form::open(['url'=>'/course/edit/'.$subject->id,'files'=>true])}}
                             {{ Form::token() }}
                             <div class="form-group">
                                 <label for="inputText3" class="col-form-label">科目名</label>
-                                {{ Form::text('subject',null,['class'=>'form-control','id'=>'inputText3','placeholder'=>'例えば：Java']) }}
+                                {{ Form::text('subject',$subject->subject,['class'=>'form-control','id'=>'inputText3','placeholder'=>'Java']) }}
                             </div>
 
                             <div class="form-group">
@@ -64,7 +64,7 @@
                                 </label>
 
                                 <div class="form-group" style="margin-top: 20px;">
-                                    <button type="submit" class="btn btn-primary">登録</button>
+                                    <button type="submit" class="btn btn-primary">更新</button>
                                 </div>
                             </div>
                             {{Form::close()}}
@@ -78,7 +78,7 @@
         <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12">
             <div class="sidebar-nav-fixed">
                 <ul class="list-unstyled">
-                    <li><a href="#overview" class="active">科目登録</a></li>
+                    <li><a href="#overview" class="active">科目更新</a></li>
                 </ul>
             </div>
         </div>
